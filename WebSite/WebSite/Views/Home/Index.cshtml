@@ -16,10 +16,14 @@
             <div class="row justify-content-end">
                 <div class="col-md-11 col-12">
                     <div class="row justify-content-between align-items-center ">
-                        <a href="#" id="open-mobile-menu-btn"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></a>
-                        <div class="col-auto"><a href="#page-top" class="deveema-title">Deveema</a></div>
+                        <div class="col-auto"><i class="fas fa-bars open-mobile-menu-btn"></i><a href="#page-top" class="deveema-title d-inline-block ">Deveema</a></div>
                         <div class="col-auto">
                             <nav id="navbar" class="overlay">
+                                <div class="container overlay-titlte">
+                                    <i class="fas fa-times close-mobile-menu-btn"></i>
+                                    <a href="#page-top" class="deveema-title d-inline-block ">Deveema</a>
+                                </div>
+
                                 <ul class="menu overlay-content">
                                     <li><a class="active" href="#page-top">Home</a></li>
                                     <li><a href="#approach">About us</a></li>
@@ -39,7 +43,15 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <div class="social-links-horizontal">
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-center">
+                                            <div class="col-auto"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+                                            <div class="col-auto"><a href="#"><img src="~/images/icons/upwork.png" alt=""></a></div>
+                                            <div class="col-auto"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </nav>
                         </div>
                     </div>
@@ -49,12 +61,12 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-1 social-links-vertical">
+            <div class="col-sm-1 social-links-vertical">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><img src="~/images/icons/upwork.png" alt=""></a>
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="col-md-11 col-12">
+            <div class="col-sm-11 col-12">
                 <div class="what-we-do-text">- What we do</div>
                 <div class="main-text">Lorem ipsum dolor sit amet</div>
                 <div class="details-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</div>
@@ -112,7 +124,6 @@
             </div>
         </div>
     </div>
-    </div>
 </section>
 
 
@@ -122,8 +133,8 @@
     <h1 class="container text-white">Our Approach</h1>
 
     <div class="approaches">
-        <div class="container">
-            <div class="timeline-item">
+        <div class="container owl-carousel approaches-mobile-slider owl-theme">
+            <div class="timeline-item item">
                 <div class="timeline-img"></div>
 
                 <div class="timeline-content ">
@@ -133,7 +144,7 @@
                 </div>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item item">
                 <div class="timeline-img"></div>
 
                 <div class="timeline-content ">
@@ -143,7 +154,7 @@
                 </div>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item item">
                 <div class="timeline-img"></div>
 
                 <div class="timeline-content ">
@@ -153,7 +164,7 @@
                 </div>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item item">
                 <div class="timeline-img"></div>
 
                 <div class="timeline-content ">
@@ -200,7 +211,7 @@
     <div class="owl-carousel loop owl-theme">
         <div class="item">
             <div class="row">
-                <div class="col-4"><img src="~/images/people/1.png" width="100"></div>
+                <div class="col-4"><img src="~/images/people/1.png" width="100" alt="person's photo"></div>
                 <div class="col-8">
                     <div class="Client-Name">Aidan Miller</div>
                     <div class="Client-Company">Company name</div>
@@ -210,7 +221,7 @@
         </div>
         <div class="item">
             <div class="row">
-                <div class="col-4"><img src="~/images/people/2.png" width="100"></div>
+                <div class="col-4"><img src="~/images/people/2.png" width="100" alt="person's photo"></div>
                 <div class="col-8">
                     <div class="Client-Name">Aidan Miller</div>
                     <div class="Client-Company">Company name</div>
@@ -220,7 +231,7 @@
         </div>
         <div class="item">
             <div class="row">
-                <div class="col-4"><img src="~/images/people/3.png" width="100"></div>
+                <div class="col-4"><img src="~/images/people/3.png" width="100" alt="person's photo"></div>
                 <div class="col-8">
                     <div class="Client-Name">Aidan Miller</div>
                     <div class="Client-Company">Company name</div>
@@ -230,7 +241,7 @@
         </div>
         <div class="item">
             <div class="row">
-                <div class="col-4"><img src="~/images/people/4.png" width="100"></div>
+                <div class="col-4"><img src="~/images/people/4.png" width="100" alt="person's photo"></div>
                 <div class="col-8">
                     <div class="Client-Name">Aidan Miller</div>
                     <div class="Client-Company">Company name</div>
@@ -246,24 +257,24 @@
 <!-- Our leadership team -->
 <section id="leadership-team">
     <h1 class="container">Our leadership team</h1>
-    <div class="team-cards">
+    <div class="team-cards ">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-auto teammate">
+            <div class="row justify-content-center owl-carousel team-mobile-slider">
+                <div class="col-auto teammate item">
                     <img src="~/images/team/1.png" alt="">
                     <div class="name">Ivan Solomichev</div>
                     <div class="position">HED and CEO</div>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <div class="col-auto teammate" id="team-top">
+                <div class="col-auto teammate item" id="team-top">
                     <img src="~/images/team/1.png" alt="">
                     <div class="name">Ivan Solomichev</div>
                     <div class="position">HED and CEO</div>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <div class="col-auto teammate">
+                <div class="col-auto teammate item">
                     <img src="~/images/team/1.png" alt="">
                     <div class="name">Ivan Solomichev</div>
                     <div class="position">HED and CEO</div>
@@ -275,6 +286,8 @@
     </div>
 </section>
 
+
+<!-- Contact us -->
 <section id="contact-us">
     <div class="container">
         <h1>Contact us</h1>
@@ -308,6 +321,7 @@
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><img src="~/images/icons/upwork.png" alt=""></a>
+                    <a href="#page-top"><i class="fas fa-chevron-up"></i></a>
                 </div>
             </div>
         </div>
