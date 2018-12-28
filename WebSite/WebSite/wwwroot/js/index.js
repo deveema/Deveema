@@ -19,6 +19,14 @@ function openNav() {
 function closeNav() {
     document.getElementById("navbar").style.height = "0%";
 }
+$(document).ready(function () {
+    $(".open-mobile-menu-btn").click(function () {
+        openNav();
+    });
+    $(".close-mobile-menu-btn, ul li a").click(function () {
+        closeNav();
+    });
+});
 
 //sticky top
 $(window).scroll(function () {
@@ -41,16 +49,52 @@ $(document).ready(function () {
 
         return false;
     });
+
 });
 
-//Feedback
+//Carousels' params
+if ($(window).width() < 576) {
+    $('.owl-carousel.approaches-mobile-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsive: {
+            0: {
+                items: 1
+            },
+
+        }
+    })
+}
+if ($(window).width() < 768) {
+    $('.owl-carousel.team-mobile-slider').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsive: {
+            0: {
+                items: 1.5
+            },
+            400: {
+                items: 2
+            },
+        }
+    })
+}
 $('.loop').owlCarousel({
     center: true,
     items: 2,
     loop: true,
     margin: 10,
     responsive: {
-        600: {
+        0: {
+            items: 1
+        },
+        576: {
+            items: 2
+        },
+        768: {
+            items: 2.5
+        },
+        1024: {
             items: 3.25
         }
     }
@@ -58,22 +102,20 @@ $('.loop').owlCarousel({
 
 
 
-//auto height for text area
+/*//auto height for text area
 jQuery.fn.extend({
     autoHeight: function () {
-        function autoHeight_(element) {
-            return jQuery(element)
-                .css({ 'height': 'auto', 'overflow-y': 'hidden' })
-                .height(element.scrollHeight);
-        }
-        return this.each(function () {
-            autoHeight_(this).on('input', function () {
-                autoHeight_(this);
-            });
+      function autoHeight_(element) {
+        return jQuery(element)
+          .css({ 'height': 'auto', 'overflow-y': 'hidden' })
+          .height(element.scrollHeight);
+      }
+      return this.each(function() {
+        autoHeight_(this).on('input', function() {
+          autoHeight_(this);
         });
+      });
     }
-});
-
-$('textarea').autoHeight();
-
-
+  });
+  
+  $('textarea').autoHeight();*/
